@@ -1,0 +1,28 @@
+POST https://localhost:3000/api/users/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Test1",
+    "password": "Password123"
+}
+###
+POST https://localhost:3000/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Test1",
+    "password": "Password123"
+}
+###
+POST https://localhost:3000/api/posts HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3QxIiwidXNlcmlkIjoiNjMzMmMxMDhlZjIyMjY0Yzc3M2ViYzViIiwiaWF0IjoxNjY0NzQzMDE2LCJleHAiOjE2NjQ3NDY2MTZ9.PuBzltdvQy2YCT2hw2dnsi431-7ULIkOysHjrpL1tVY
+
+{
+    "id": "1",
+    "postDetails": "First post"
+}
+###
+GET https://localhost:3000/api/posts HTTP/1.1
+###
+DELETE https://localhost:3000/api/posts/6332c647823a689e0f70e133 HTTP/1.1
